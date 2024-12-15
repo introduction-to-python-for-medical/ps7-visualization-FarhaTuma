@@ -44,8 +44,8 @@ plt.scatter(df[reference_feature], df[comparison_feature],
 x = df[reference_feature]
 y = df[comparison_feature]
 
-# חישוב קו המגמה (שימוש ב-polyfit למציאת המקדמים)
-coefficients = np.polyfit(x, y, 2)  # Fit a linear trend line (degree 1)
+# חישוב קו המגמה מהמעלה 2
+coefficients = np.polyfit(x, y, 2)  # Fit a trend line (degree 2)
 trend_line = np.poly1d(coefficients)  # Create the trend line equation
 plt.plot(x, trend_line(x), color='gray', linewidth=1.5, label=f'Trend Line: y = {coefficients[0]:.2f}x + {coefficients[1]:.2f}')
 
