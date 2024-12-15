@@ -1,1 +1,14 @@
+בשיעור התמקדנו בניתוח נתונים ויצירת גרפים אינפורמטיביים באמצעות חבילות מתקדמות כמו  matplotlib ו  seabor.
+תחילה ייבאתי את מערך הנתונים "יין" באמצעות fetch_openml  ובחתרתי תכונות ספציפיות לניתוח. בניתי גרפים שונים: היסטוגרמות להצגת התפלגות הערכים של כל תכונה (באמצעות hist), וגם גרפי פיזור (scatter plots) להשוואת תכונות זו לזו ולזיהוי קשרים אפשריים ביניהן, שהצגנו אותן באמצעות fig, axes כsub plots )יותר מגרף אחד על אותו מרחב שאני מגדירה) .
+גם כן, יצרתי גרף מפורט להשוואת שתי תכונות שבחרתי. בגרף, כל נקודה מייצגת דגימה אחת ממערך הנתונים, כאשר ציר ה-X מציין את הערכים של תכונת הייחוס וציר ה-Y מציין את הערכים של תכונת ההשוואה. הנקודות צבועות בגוון טורקיז עם קווי מתאר שחורים, מה שמקל על זיהוי הנקודות, גם כאשר יש חפיפה ביניהן.
+בנוסף, הוספתי קו מגמה (Trend Line)  לגרף, והוא מחושב באמצעות numpy.polyfit. קו המגמה נועד להראות את המגמה הכללית של הקשר בין שתי התכונות בצורה חזותית. בחרתי קו מגמה מדרגה שנייה (פולינום), מה שמאפשר לזהות אם קיים קשר לא ליניארי.
+שיחקתי בעיצוב בשביל היופי ושיפור הקריאה, הוספתי כותרת ראשית שמתארת הקשר בין התכונות, כותרת לשני הצירים, רשת (Grid) שמוסיפה תחושת פרופורציה וגם השתמשתי בסגנון ggplot  למען הענקת תחושה מודרנית לגרף.
+
+
+Same words but in English cuz in Hebrew its hard to read due to the direction of the text:
+
+In the lesson, we focused on data analysis and creating informative graphs using advanced libraries such as matplotlib and seaborn. First, I imported the "wine" dataset using fetch_openml and selected specific features for analysis. I created various graphs: histograms to display the distribution of values for each feature (using hist), and scatter plots to compare features and identify potential relationships. These were presented using fig and axes as subplots (multiple graphs within the same space).
+Additionally, I created a detailed graph to compare two selected features. In this scatter plot, each point represents a single sample from the dataset, where the X-axis indicates the values of the reference feature, and the Y-axis indicates the values of the comparison feature. The points are colored in teal with black outlines, making it easier to distinguish them, even when overlapping occurs.
+Moreover, I added a trend line to the graph, calculated using numpy.polyfit. The trend line visually represents the overall relationship between the two features. I chose a second-degree polynomial trend line, which helps identify non-linear relationships if present.
+To enhance the aesthetics and readability, I styled the graph by adding a main title that describes the relationship between the features, labels for both axes, and a grid to add a sense of proportion. I also used the ggplot style to give the graph a modern and polished appearance.
 
